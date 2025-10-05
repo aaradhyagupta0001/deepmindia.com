@@ -1,0 +1,27 @@
+.globe {
+  position: absolute;
+  right: -20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 800px;
+  height: 800px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 1200px) {
+  .globe {
+    right: -40%;
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .globe {
+    right: -50%;
+    width: 400px;
+    height: 400px;
+  }
+}
