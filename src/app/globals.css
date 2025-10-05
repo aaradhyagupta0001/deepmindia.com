@@ -12,12 +12,13 @@ html {
 
 body {
   font-family: var(--font-main);
-  background-color: var(--background-dark);
+  background-color: var(--background);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 a {
