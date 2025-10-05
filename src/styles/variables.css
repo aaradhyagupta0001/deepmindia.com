@@ -1,11 +1,23 @@
 :root {
-  /* Color palette inspired by fractal.ai */
+  /* Base colors */
   --primary-color: #0066FF;
   --secondary-color: #00D1FF;
-  --background-dark: #000212;
+  
+  /* Light theme colors */
   --background-light: #ffffff;
-  --text-primary: #ffffff;
-  --text-secondary: #8B8B8B;
+  --text-primary-light: #1a1a1a;
+  --text-secondary-light: #666666;
+  --card-bg-light: rgba(0, 0, 0, 0.03);
+  --card-border-light: rgba(0, 0, 0, 0.1);
+  
+  /* Dark theme colors */
+  --background-dark: #000212;
+  --text-primary-dark: #ffffff;
+  --text-secondary-dark: #8B8B8B;
+  --card-bg-dark: rgba(255, 255, 255, 0.03);
+  --card-border-dark: rgba(255, 255, 255, 0.1);
+  
+  /* Common */
   --gradient-1: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   
   /* Typography */
@@ -26,4 +38,22 @@
   /* Container */
   --container-width: 1200px;
   --container-padding: 1rem;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --background: var(--background-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --card-bg: var(--card-bg-light);
+  --card-border: var(--card-border-light);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --background: var(--background-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --card-bg: var(--card-bg-dark);
+  --card-border: var(--card-border-dark);
 }

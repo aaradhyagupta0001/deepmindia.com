@@ -1,13 +1,14 @@
 .globe {
   position: absolute;
-  right: -20%;
+  right: -10%;
   top: 50%;
   transform: translateY(-50%);
   width: 800px;
   height: 800px;
   opacity: 0.6;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+  mix-blend-mode: screen;
 }
 
 @media (max-width: 1200px) {
