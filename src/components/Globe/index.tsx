@@ -4,11 +4,12 @@ import { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere } from '@react-three/drei';
 import * as THREE from 'three';
+import { Mesh } from 'three';
 import styles from './Globe.module.css';
 
 const GlobeMesh = () => {
-  const meshRef = useRef();
-  const materialRef = useRef();
+  const meshRef = useRef<Mesh>(null);
+  const materialRef = useRef<THREE.ShaderMaterial>(null);
 
   useFrame((state) => {
     if (meshRef.current) {
