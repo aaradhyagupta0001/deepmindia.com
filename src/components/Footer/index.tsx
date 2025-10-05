@@ -23,13 +23,13 @@ const Footer = () => {
               for businesses and society.
             </p>
             <div className={styles.social}>
-              <a href="#" className={styles.socialIcon} aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/deepmind-india" className={styles.socialIcon} aria-label="LinkedIn">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="#" className={styles.socialIcon} aria-label="Twitter">
+              <a href="https://twitter.com/deepmindindia" className={styles.socialIcon} aria-label="Twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className={styles.socialIcon} aria-label="GitHub">
+              <a href="https://github.com/ankurdotcom/deepmindia.com" className={styles.socialIcon} aria-label="GitHub">
                 <i className="fab fa-github"></i>
               </a>
             </div>
@@ -76,8 +76,8 @@ const Footer = () => {
           >
             <h3>Legal</h3>
             <div className={styles.links}>
-              <a href="#privacy" className={styles.link}>Privacy Policy</a>
-              <a href="#terms" className={styles.link}>Terms of Service</a>
+              <a href="/privacy" className={styles.link}>Privacy Policy</a>
+              <a href="/terms" className={styles.link}>Terms of Service</a>
               <a href="#cookies" className={styles.link}>Cookie Policy</a>
             </div>
           </motion.div>

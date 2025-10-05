@@ -35,7 +35,7 @@ export default function ContactForm() {
               <span className="gradient-text">Get in Touch</span>
             </h2>
             <p className={styles.subtitle}>
-              Have a project in mind? Let's discuss how we can help bring your ideas to life.
+              Have a project in mind? Let&apos;s discuss how we can help bring your ideas to life.
             </p>
           </div>
         </ScrollReveal>
