@@ -1,10 +1,17 @@
+'use client';
+
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Globe from '@/components/Globe';
 import WhatWeDo from '@/components/WhatWeDo';
 import Footer from '@/components/Footer';
+import { ScrollReveal } from '@/components/ScrollReveal';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 export default function Home() {
+  // Initialize smooth scrolling
+  useSmoothScroll();
+
   return (
     <>
       <Navigation />
@@ -13,7 +20,9 @@ export default function Home() {
           <Hero />
           <Globe />
         </div>
-        <WhatWeDo />
+        <ScrollReveal>
+          <WhatWeDo />
+        </ScrollReveal>
       </main>
       <Footer />
     </>

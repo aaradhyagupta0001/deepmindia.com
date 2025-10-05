@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import styles from './WhatWeDo.module.css';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 const services = [
   {
@@ -46,18 +47,14 @@ const WhatWeDo = () => {
     }
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 20
     },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut'
-      }
+      y: 0
     }
   };
 
@@ -87,15 +84,16 @@ const WhatWeDo = () => {
           viewport={{ once: true }}
         >
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className={styles.card}
-              variants={cardVariants}
-            >
-              <div className={styles.cardIcon}>{service.icon}</div>
-              <h3 className={styles.cardTitle}>{service.title}</h3>
-              <p className={styles.cardDescription}>{service.description}</p>
-            </motion.div>
+            <ScrollReveal key={index}>
+              <motion.div
+                className={styles.card}
+                variants={cardVariants}
+              >
+                <div className={styles.cardIcon}>{service.icon}</div>
+                <h3 className={styles.cardTitle}>{service.title}</h3>
+                <p className={styles.cardDescription}>{service.description}</p>
+              </motion.div>
+            </ScrollReveal>
           ))}
         </motion.div>
       </div>
