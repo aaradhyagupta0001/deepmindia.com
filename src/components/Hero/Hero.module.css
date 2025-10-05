@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--background-dark);
+  background: var(--background);
+  z-index: 1;
 }
 
 .background {

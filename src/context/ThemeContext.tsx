@@ -15,12 +15,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    // Check local storage or system preference
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
-    setTheme(initialTheme);
-    document.documentElement.setAttribute('data-theme', initialTheme);
+    try {
+      // Check local storage or system preference
+      const savedTheme = localStorage.getItem('theme') as Theme;
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const initialTheme = savedTheme || systemTheme;
+      setTheme(initialTheme);
+      document.documentElement.setAttribute('data-theme', initialTheme);
+    } catch (error) {
+      // Fallback for SSR
+      console.warn('Theme could not be set:', error);
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
   }, []);
 
   const toggleTheme = () => {

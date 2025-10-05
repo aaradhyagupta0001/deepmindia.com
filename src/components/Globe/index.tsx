@@ -31,11 +31,11 @@ const GlobeMesh = () => {
       float wave = sin(longitude * 8.0 + uTime) * 0.5 + 0.5;
       float grid = abs(sin(latitude * 10.0)) + abs(sin(longitude * 10.0));
       
-      vec3 color1 = vec3(0.0, 0.4, 1.0); // Blue
-      vec3 color2 = vec3(0.0, 0.8, 1.0); // Light blue
+      vec3 color1 = vec3(0.0, 0.6, 1.0); // Brighter blue
+      vec3 color2 = vec3(0.0, 1.0, 1.0); // Cyan
       
       vec3 finalColor = mix(color1, color2, wave * grid);
-      float alpha = grid * 0.3;
+      float alpha = grid * 0.5;
       
       gl_FragColor = vec4(finalColor, alpha);
     }

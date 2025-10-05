@@ -23,8 +23,8 @@ export const ScrollReveal = ({ children, className = '', threshold = 0.1, once =
       ref={ref}
       className={`${className} ${isInView ? 'fade-in visible' : 'fade-in'}`}
       style={{ 
-        opacity: 0,
-        transform: 'translateY(20px)',
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? 'translateY(0)' : 'translateY(20px)',
         transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
       }}
     >

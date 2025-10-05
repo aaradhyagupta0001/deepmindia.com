@@ -19,7 +19,11 @@ export default function Home() {
     <>
       <Navigation />
       <main>
-        <div style={{ position: 'relative' }}>
+        <div style={{ 
+          position: 'relative',
+          minHeight: '100vh',
+          overflow: 'hidden'
+        }}>
           <Hero />
           <Globe />
         </div>
