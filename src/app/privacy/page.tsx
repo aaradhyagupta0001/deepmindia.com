@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
       <h1>Privacy Policy</h1>
-      <p><em>Last updated: October 5, 2025</em></p>
+      <p><em>Last updated: October 6, 2025</em></p>
 
       <p>This Privacy Policy describes how DeepMind India (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and protects your information when you use our website and services.</p>
 
